@@ -40,7 +40,7 @@ class CalendarsController < ApplicationController
     # ・もし7以上なら7引いて戻す
       wday_num = wday_num - 7 if wday_num >= 7
     
-      days = { :month => (@todays_date + x).month, :date  => (@todays_date + x).day, :wdays => wdays[wday_num], :plans => today_plans}
+      days = { month: (@todays_date + x).month, date: (@todays_date + x).day, wdays: wdays[wday_num], plans: today_plans }
       @week_days.push(days)
     end
 
